@@ -1,58 +1,44 @@
 <?php
 
-namespace Application\Form;
+namespace Account\Form;
 
 use Zend\Form\Form;
-use Zend\Form\Element;
 
 /**
  * Description of RegisterForm
  *
  * @author Pedro
  */
-class ContactForm extends Form
+class RegisterForm extends Form
 {
 
     public function __construct($name = null)
     {
         parent::__construct($name);
 
-        $this->setAttribute('action', '');
+        $this->setAttribute('action', 'account/register/addUser');
         $this->setAttribute('method', 'post');
-
-        $this->add(array(
-            'name' => 'name',
-            'attributes' => array(
-                'type' => 'text',
-                'id' => 'name',
-                'class' => 'form-control input-lg',
-                'placeholder' => 'Nombre',
-                'size' => 30,
-                'required' => true,
-                
-            ),
-        ));
         
         $this->add(array(
             'name' => 'email',
             'type' => 'email',
             'attributes' => array(
                 
-                'id' => 'firstname',
+                'id' => 'email',
                 'class' => 'form-control input-lg',
-                'placeholder' => 'Correo Electrónico',
+                'placeholder' => 'Email',
                 'required' => true,
                
             ),
         ));
        
         $this->add(array(
-            'type' => 'Zend\Form\Element\Textarea',
-            'name' => 'messaje',
+            'type' => 'Zend\Form\Element\Password',
+            'name' => 'password',
            'attributes' => array(              
-                'id' => 'messaje',
+                'id' => 'password',
                 'class' => 'form-control input-lg',
-                'placeholder' => 'Mensaje',
+                'placeholder' => 'Contraseña',
                 'required' => true,
                
         

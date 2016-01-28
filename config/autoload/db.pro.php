@@ -10,10 +10,10 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
-$dbhost = 'piderapido.net';
-$dbuser = 'piderapido';
-$dbpass = '123753951';
-$dbname = 'piderapido';
+$dbhost = 'localhost';
+$dbuser = 'root';
+$dbpass = '';
+$dbname = 'doggerout';
 return array(
    'db' => array(
          'driver'         => 'Pdo',

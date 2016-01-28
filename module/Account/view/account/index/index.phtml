@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dogger Out </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="<?php echo $this->basePath('') ?>/css/bootstrap.min.css">
+        <!-- Fonts from Font Awsome -->
+        <link rel="stylesheet" href="<?php echo $this->basePath('') ?>/css/font-awesome.min.css">
+         <!-- Magnific popup -->
+        <link rel="stylesheet" href="<?php echo $this->basePath('') ?>/css/magnific-popup.css">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="<?php echo $this->basePath('') ?>/css/main.css">
+        <!-- Color options -->
+        <link rel="stylesheet" href="<?php echo $this->basePath('') ?>/css/colors/green.css">
+        <!-- Feature detection -->
+        <script src="<?php echo $this->basePath('') ?>/js/modernizr-2.6.2.min.js"></script>
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+    <!-- welcome begins -->
+   
+    <!-- Nav starts -->
+     <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          
+          <a class="navbar-brand" href="<?php echo $this->url('application', array('controller' => 'index', 'action' => 'index')) ?>"><img src="<?php echo $this->basePath('') ?>/img/logo.png" alt=""></a>
+           
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <a href="<?php echo $this->url('application', array('controller' => 'index', 'action' => 'index')) ?>" class="back-top" style="color:#F49527; float:right; font-family:Montserrat,sans-serif; font-size: 14px; padding-top:25px; height:60px;"><i class="fa fa-chevron-left" style="font-size: 80%; color:#F49527; text-align: right;"></i> Volver</a>
+        
+          <ul class="nav navbar-nav nav-effect" id="main-menu">
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div><!-- Nav ends -->
+
+      <!-- about begins -->
+
+            <section id="parallax-quote" class="parallax">
+                <div class="parallax-background1 parallax-background"></div><!-- parallax bg image -->
+                <div class="overlay"></div>
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <div class="parallax-content">
+                          <blockquote>
+                              <i class="fa fa-quote-left"></i> Hasta que hayas amado a un animal, una parte del alma estará dormida <i class="fa fa-quote-right"></i>
+                              <footer>- Fritz Von Unruch </footer>
+                          </blockquote>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </section><!-- parallax quote end -->
+ 
+
+    <section id="page-services" class="page-services">
+       <div class="container">
+                 <header class="section-header">
+                    <h2 class="section-title"><span>Sé parte de nuestra comunidad</span></h2>
+                      <div class="spacer"></div>
+                    <p class="section-subtitle">Elige tu perfil Dogger Out</p>
+                </header>
+            <div class="row">
+              <div class="col-md-6">
+               <div class="service-block service-block2">
+                    <div class="service-icon">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <h3>Cliente Dogger Out</h3>
+                    <p>Paseadores calificados hacen que tu perro cambie de ambiente, se ejercite y juegue.</p>
+
+                     <form action="<?php echo $this->basePath($this->register_form->getAttribute('action')); ?>" method="<?php echo $this->register_form->getAttribute('method'); ?>" class="form-horizontal" id="contact-form">
+
+                         <div class="control-group">
+                            <label class="control-label" for="name">Correo electrónico</label>
+                            <div class="controls">
+                                <?php echo $this->formInput($this->register_form->get('email')); ?>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="name">Contraseña</label>
+                            <div class="controls">
+                                <?php echo $this->formPassword($this->register_form->get('password')); ?>
+                            </div>
+                        </div>
+
+                         <div class="form-actions">
+                            <br>
+                            <button type="submit" class="btn btn-default2 btn-lg btn-block">Enviar Registro</button>
+                        </div>
+
+                     </form>
+                    
+               </div>
+            </div>
+               <div class="col-md-6">
+                <div class="service-block service-block2">
+                  <div class="service-icon">
+                     <i class="fa fa-male"></i>
+                    </div>
+                    <h3>Paseador Dogger Out</h3>
+                     <p>Si quieres trabajar en Dogger Out puedes aplicar para una cita con nuestro Staff.</p>
+                    
+                       <form class="form-horizontal" id="contact-form" action="<?php echo $this->basePath($this->walker_form->getAttribute('action')); ?>"  method="<?php echo $this->walker_form->getAttribute('method'); ?>">
+
+                         <div class="control-group">
+                            <label class="control-label" for="name">Correo Electrónico<br></label>
+                            <div class="controls">
+                                <?php echo $this->formInput($this->walker_form->get('email')); ?>
+                            </div>
+                            <br><br><br>
+                        </div>
+
+                         <div class="form-actions" style="padding-top:15px;">
+                            <br>
+                            <button type="submit" class="btn btn-default2 btn-lg btn-block">Enviar Solicitud</button>
+                        </div>
+
+                     </form>
+               </div>
+            </div>
+          </div>
+        </div>
+    </section><!-- services ends -->
+
+        <script src="<?php echo $this->basePath('') ?>/js/jquery-1.10.2.min.js"></script>
+        <script src="<?php echo $this->basePath('') ?>/js/bootstrap.min.js"></script>
+        <script src="<?php echo $this->basePath('') ?>/js/jquery.queryloader2.min.js"></script>
+        <script src="<?php echo $this->basePath('') ?>/js/jquery.parallax-1.1.3.js"></script>
+        <script src="<?php echo $this->basePath('') ?>/js/jquery.flexslider.js"></script>
+        <script src="<?php echo $this->basePath('') ?>/js/jquery.scrollTo.js"></script>
+        <script src="<?php echo $this->basePath('') ?>/js/jquery.nav.js"></script>
+        <script src="<?php echo $this->basePath('') ?>/js/jquery.sticky.js"></script>
+        <script src="<?php echo $this->basePath('') ?>/js/jquery.magnific-popup.min.js"></script>
+        <script src="<?php echo $this->basePath('') ?>/js/jquery.validate.js"></script>
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&sensor=false"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
